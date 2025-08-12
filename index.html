@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--
+MIT License - © 2025 Ayaan Siddique
+Eternal1OS - Ultra-Premium 3D Branding Website
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eternal1OS - AI at the Core. Privacy in Every Byte.</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 3D Intro Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <!-- 3D Scene Container -->
+        <div id="intro-scene" class="intro-scene">
+            <!-- Animated Background -->
+            <div class="quantum-grid"></div>
+            <canvas id="particles-3d" class="particles-3d"></canvas>
+            
+            <!-- 3D Logo Container -->
+            <div class="logo-3d-container">
+                <!-- AS Logo -->
+                <div id="as-logo" class="logo-3d as-logo">
+                    <div class="logo-face front">
+                        <div class="letter-a">A</div>
+                        <div class="letter-s">S</div>
+                    </div>
+                    <div class="logo-face back">
+                        <div class="letter-a">A</div>
+                        <div class="letter-s">S</div>
+                    </div>
+                    <div class="logo-face left"></div>
+                    <div class="logo-face right"></div>
+                    <div class="logo-face top"></div>
+                    <div class="logo-face bottom"></div>
+                </div>
+
+                <!-- Eternal1OS Logo -->
+                <div id="eternal-logo" class="logo-3d eternal-logo">
+                    <div class="logo-face front">
+                        <div class="eternal-text">Eternal1OS</div>
+                    </div>
+                    <div class="logo-face back">
+                        <div class="eternal-text">Eternal1OS</div>
+                    </div>
+                    <div class="logo-face left"></div>
+                    <div class="logo-face right"></div>
+                    <div class="logo-face top"></div>
+                    <div class="logo-face bottom"></div>
+                </div>
+            </div>
+
+            <!-- Text Animations -->
+            <div class="intro-text-container">
+                <div id="intro-subtitle" class="intro-subtitle">The Community Presents</div>
+                <div id="intro-tagline" class="intro-tagline">AI at the Core. Privacy in Every Byte.</div>
+            </div>
+
+            <!-- Loading Progress -->
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div class="progress-text">Loading... <span id="progress-percent">0%</span></div>
+            </div>
+        </div>
+
+        <!-- Skip Hint -->
+        <div class="skip-hint">Press [SPACEBAR] to skip</div>
+    </div>
+
+    <!-- Main Site -->
+    <div id="main-site" class="main-site">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo" id="nav-logo">
+                    <div class="nav-logo-3d">
+                        <div class="nav-cube">
+                            <div class="cube-face front">E1</div>
+                            <div class="cube-face back">OS</div>
+                            <div class="cube-face left"></div>
+                            <div class="cube-face right"></div>
+                            <div class="cube-face top"></div>
+                            <div class="cube-face bottom"></div>
+                        </div>
+                    </div>
+                    <span class="nav-text">Eternal1OS</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#modules" class="nav-link">Modules</a></li>
+                    <li><a href="#community" class="nav-link">Community</a></li>
+                    <li><button id="replay-intro" class="replay-btn">Replay Intro</button></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-3d-bg">
+                <canvas id="hero-canvas-3d" class="hero-canvas-3d"></canvas>
+                <div class="floating-elements">
+                    <div class="floating-cube cube-1"></div>
+                    <div class="floating-cube cube-2"></div>
+                    <div class="floating-cube cube-3"></div>
+                    <div class="floating-sphere sphere-1"></div>
+                    <div class="floating-sphere sphere-2"></div>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line">AI at the Core.</span>
+                    <span class="title-line">Privacy in Every Byte.</span>
+                </h1>
+                <p class="hero-tagline">Experience the next generation of operating systems built on transparency, security, and intelligent automation with cutting-edge responsive interfaces.</p>
+                <div class="hero-actions">
+                    <button id="download-starter" class="cta-primary cta-3d">
+                        <span class="cta-icon">⬇</span>
+                        <span class="cta-text">Download Starter</span>
+                        <div class="cta-glow"></div>
+                    </button>
+                    <a href="#community" class="cta-secondary cta-3d">
+                        <span class="cta-icon">🚀</span>
+                        <span class="cta-text">Join Community</span>
+                        <div class="cta-glow"></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3D Modules Section -->
+        <section id="modules" class="modules">
+            <div class="modules-container">
+                <h2 class="section-title">
+                    <span class="title-3d">System Modules</span>
+                </h2>
+                <div class="modules-grid-3d">
+                    <div class="module-card-3d" data-module="bootloader">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">🔧</div>
+                                <h3>Bootloader</h3>
+                                <p>Secure boot sequence with cryptographic verification</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>Advanced Features</h4>
+                                    <ul>
+                                        <li>UEFI Secure Boot</li>
+                                        <li>TPM Integration</li>
+                                        <li>Multi-OS Support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card-3d" data-module="kernel">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">⚡</div>
+                                <h3>Kernel</h3>
+                                <p>High-performance microkernel architecture</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>Performance</h4>
+                                    <ul>
+                                        <li>Sub-microsecond latency</li>
+                                        <li>Memory protection</li>
+                                        <li>Real-time scheduling</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card-3d" data-module="privacy">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">🛡️</div>
+                                <h3>Privacy</h3>
+                                <p>End-to-end encryption for all user data</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>Security</h4>
+                                    <ul>
+                                        <li>AES-256 Encryption</li>
+                                        <li>Zero-knowledge design</li>
+                                        <li>Quantum-resistant</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card-3d" data-module="ai">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">🤖</div>
+                                <h3>AI Assistant</h3>
+                                <p>Intelligent system optimization and user assistance</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>AI Capabilities</h4>
+                                    <ul>
+                                        <li>Predictive optimization</li>
+                                        <li>Natural language UI</li>
+                                        <li>Adaptive learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card-3d" data-module="network">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">🌐</div>
+                                <h3>Network</h3>
+                                <p>Advanced networking with privacy-first protocols</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>Network Stack</h4>
+                                    <ul>
+                                        <li>Built-in VPN</li>
+                                        <li>P2P architecture</li>
+                                        <li>DNS over HTTPS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-card-3d" data-module="ui">
+                        <div class="card-3d-inner">
+                            <div class="card-face front">
+                                <div class="module-icon">🎨</div>
+                                <h3>UI/UX</h3>
+                                <p>Adaptive responsive interface with motion design</p>
+                            </div>
+                            <div class="card-face back">
+                                <div class="module-details">
+                                    <h4>Interface</h4>
+                                    <ul>
+                                        <li>Best optimised workspaces</li>
+                                        <li>Gesture control</li>
+                                        <li>Adaptive themes</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <section id="community" class="community">
+            <div class="community-container">
+                <h2 class="section-title">
+                    <span class="title-3d">Join the Community</span>
+                </h2>
+                <div class="community-content-3d">
+                    <div class="community-links-3d">
+                        <a href="https://github.com/Ayaansiddiq07/Eternal1OS" class="community-link-3d" target="_blank" rel="noopener">
+                            <div class="link-3d-inner">
+                                <div class="link-icon">📚</div>
+                                <span class="link-text">GitHub Repository</span>
+                            </div>
+                        </a>
+                        <a href="https://discord.gg/mhgUcZ6K" class="community-link-3d" target="_blank" rel="noopener">
+                            <div class="link-3d-inner">
+                                <div class="link-icon">💬</div>
+                                <span class="link-text">Discord Server</span>
+                            </div>
+                        </a>
+                        <a href="https://docs.eternal1os.org" class="community-link-3d" target="_blank" rel="noopener">
+                            <div class="link-3d-inner">
+                                <div class="link-icon">📖</div>
+                                <span class="link-text">Documentation</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="code-matrix-bg">
+                        <canvas id="code-matrix" class="code-matrix"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-logo-3d">
+                        <div class="footer-cube">
+                            <div class="cube-face front">E1</div>
+                            <div class="cube-face back">OS</div>
+                        </div>
+                    </div>
+                    <span>Eternal1OS</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/share/1FguDgswHi/" target="_blank" rel="noopener" class="footer-link">Facebook</a>
+                    <a href="https://www.linkedin.com/in/ayaan-siddique-49870730b/" target="_blank" rel="noopener" class="footer-link">LinkedIn</a>
+                    <a href="https://instagram.com/cybernetxayaan" target="_blank" rel="noopener" class="footer-link">Instagram</a>
+                </div>
+                <div class="footer-copyright">
+                    © 2025 Ayaan Siddique — MIT License
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
